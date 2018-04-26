@@ -21,7 +21,47 @@
 .App-intro {
   font-size: large;
 }
-
+.jumbo{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  color: white;
+  transition: 1s;
+  opacity: 1;
+  top: 0;
+}
+.jumbo_disabled{
+  top: -100%;
+  opacity: 0;
+  transition: 1s;
+}
+.jumbotext{
+  padding-left: 40px ;
+}
+.jumbotext__h{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.jumbotext__p{
+  margin-top: 10px;
+  margin-bottom:20px;
+}
+.secondScreen{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 100%;
+  opacity: 0;
+  transition: 1s;
+}
+.secondScreenActive{
+  top: 0;
+  opacity: 1;
+  transition: 1s;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
