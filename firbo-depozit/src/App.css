@@ -1,68 +1,116 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
-.jumbo{
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  max-width: 800px;
-  display: flex;
-  align-items: center;
-  color: white;
-  transition: 1s;
-  opacity: 1;
-  top: 0;
+
+.jumbo {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: 1s;
+    opacity: 1;
+    top: 0;
 }
-.jumbo_disabled{
-  top: -100%;
-  opacity: 0;
-  transition: 1s;
+
+.jumbo_disabled {
+    top: -100%;
+    opacity: 0;
+    transition: 1s;
 }
-.jumbotext{
-  padding-left: 40px ;
+
+.jumbotext {
+    padding-left: 40px;
 }
-.jumbotext__h{
-  margin-top: 0;
-  margin-bottom: 0;
+
+.jumbotext__h {
+    margin-top: 0;
+    margin-bottom: 0;
 }
-.jumbotext__p{
-  margin-top: 10px;
-  margin-bottom:20px;
+
+.jumbotext__p {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
-.secondScreen{
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  top: 100%;
-  opacity: 0;
-  transition: 1s;
+
+.secondScreen {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 100%;
+    
+    transition: 1s;
 }
-.secondScreenActive{
-  top: 0;
-  opacity: 1;
-  transition: 1s;
+
+.secondScreenActive {
+    top: 0;
+    opacity: 1;
+    transition: 1s;
+    
 }
+
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.jumbo__moreButton {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 400;
+    border: none;
+    background-color: #392e3e;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.jumbo__moreButton:hover {
+    transition: 0.5s;
+    opacity: 0.9;
+}
+
+.jumbo__contactButton {
+    font-family: 'IBM Plex Serif', serif;
+    margin-left: 20px;
+    font-weight: 400;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.4);
+
+
+    padding: 10px 20px;
+    color: white;
+    font-size: 1em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.jumbo__contactButton:hover{
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.3);
+
 }

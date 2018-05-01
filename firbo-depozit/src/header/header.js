@@ -60,7 +60,20 @@ class Header extends Component {
         <a className="menu__link" href="">Техподдержка</a>
         <a className="menu__link" href="">Связаться с пресс-службой</a>
       </div>
-            <div className="menu__column menu_column__1">
+      <div className="menu__column menu_column__1">
+      <h3 className="menu__h3">Фирбо капитал</h3>
+        <a className="menu__link" href="">Наши услуги и продукты</a>
+        <a className="menu__link" href="">Информация о компании</a>
+        <a className="menu__link" href="">Благотворительность</a>
+        <a className="menu__link" href="">Отзывы</a>
+        <a className="menu__link" href="">Наши клиенты</a>
+        <a className="menu__link" href="">Партнеры и друзья</a>
+        <a className="menu__link" href="">Наши награды</a>
+        <a className="menu__link" href="">Стать партнером</a>
+        <a className="menu__link" href="">Техподдержка</a>
+        <a className="menu__link" href="">Связаться с пресс-службой</a>
+      </div>
+      <div className="menu__column menu_column__1">
       <h3 className="menu__h3">Фирбо капитал</h3>
         <a className="menu__link" href="">Наши услуги и продукты</a>
         <a className="menu__link" href="">Информация о компании</a>

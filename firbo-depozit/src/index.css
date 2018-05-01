@@ -1,18 +1,21 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 h1 { font-size: 3.5em; 
 }
 h2 { font-size: 2em; }
-h3 { font-size: 1.17em;
+h3 { font-size: 1.7em;
 margin:0; }
 h4 { font-size: 1.12em; }
 h5 { font-size: .83em; }
 h6 { font-size: .75em; }
 h1,h2,h3,h4,h5,h6{
-  font-weight: 700;
+  font-weight: 600;
 }
 #root{
 	    min-height: 100vh;
