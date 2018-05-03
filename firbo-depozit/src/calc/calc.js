@@ -23,7 +23,7 @@ class Calculator extends Component {
 
   render() {
   	return(
-  		<div className="calculator">
+  	      <div className="calculator">
       <AnimatedNumber component="text" value={this.state.precent[this.state.value[0]+this.state.value[1]]}
               style={{
                   transition: '0.8s ease-out',
@@ -46,30 +46,39 @@ class Calculator extends Component {
 
        {/*state.value[срок вклада,с сохранинием]. на клик меняет стэйт, класс смотрит значения валью и ставит хайлант*/}
          
-         <h2 onClick={()=> OwlCarousel.to(0, 1000)}>Срок депозита:</h2>
-         <h3 onClick={() => this.setState({value : [0,this.state.value[1]] })} className={this.state.value[0] === 0 ? 'caclulator__info__active' : ''}>Полгода</h3> <br/>
-         <h3 onClick={() => this.setState({value : [1,this.state.value[1]] })} className={this.state.value[0] === 1 ? 'caclulator__info__active' : ''}>Год</h3><br/>
-         <h3 onClick={() => this.setState({value : [2,this.state.value[1]] })} className={this.state.value[0] === 2 ? 'caclulator__info__active' : ''}>Два года</h3><br/>
-         <h3 onClick={() => this.setState({value : [3,this.state.value[1]] })} className={this.state.value[0] === 3 ? 'caclulator__info__active' : ''}>От трех лет</h3><br/>
-         <h2>Со страховкой?</h2>
-         <h3 onClick={() => this.setState({value : [this.state.value[0],0] })} className={this.state.value[1] === 0 ? 'caclulator__info__active' : ''}>Да</h3><br/>
-         <h3 onClick={() => this.setState({value : [this.state.value[0],4] })} className={this.state.value[1] === 4 ? 'caclulator__info__active' : ''}>Нет</h3><br/>
-         <h2>Процент:</h2>
-         <h1>
-          
-          <AnimatedNumber component="text" value={this.state.precent[this.state.value[0]+this.state.value[1]]}
-              style={{
-                  transition: '0.8s ease-out',
-                  fontSize: 48,
-                  transitionProperty:
-                      'background-color, color, opacity'
-              }}
-              
-              duration={300}
-              stepPrecision={1}/>
-         %
-         </h1>
-      
+         <div className="calculator__paramBlock">
+          <h2>Срок депозита:</h2>
+          <div className="calculator__variants">
+             <h3 onClick={() => this.setState({value : [0,this.state.value[1]] })} className={this.state.value[0] === 0 ? 'caclulator__info__active' : ''}>Полгода</h3> <br/>
+             <h3 onClick={() => this.setState({value : [1,this.state.value[1]] })} className={this.state.value[0] === 1 ? 'caclulator__info__active' : ''}>Год</h3><br/>
+             <h3 onClick={() => this.setState({value : [2,this.state.value[1]] })} className={this.state.value[0] === 2 ? 'caclulator__info__active' : ''}>Два года</h3><br/>
+             <h3 onClick={() => this.setState({value : [3,this.state.value[1]] })} className={this.state.value[0] === 3 ? 'caclulator__info__active' : ''}>От трех лет</h3><br/>
+          </div>
+         </div>
+         <div className="calculator__paramBlock">
+           <h2>Со страховкой?</h2>
+           <div className="calculator__variants">
+             <h3 onClick={() => this.setState({value : [this.state.value[0],0] })} className={this.state.value[1] === 0 ? 'caclulator__info__active' : ''}>Да</h3><br/>
+             <h3 onClick={() => this.setState({value : [this.state.value[0],4] })} className={this.state.value[1] === 4 ? 'caclulator__info__active' : ''}>Нет</h3><br/>
+           </div>
+         </div>
+         <div className="calculator__paramBlock">
+           <h2>Процент:</h2>
+           <h1>
+            
+            <AnimatedNumber component="text" value={this.state.precent[this.state.value[0]+this.state.value[1]]}
+                style={{
+                    transition: '0.8s ease-out',
+                    fontSize: 48,
+                    transitionProperty:
+                        'background-color, color, opacity'
+                }}
+                
+                duration={300}
+                stepPrecision={1}/>
+           %
+           </h1>
+          </div>
 
       </div>
       <div className="calculator__text">

@@ -13,7 +13,7 @@ class Header extends Component {
     
     this.state = {
       active: false,
-      param: 25.5,
+      
     };
   }
 

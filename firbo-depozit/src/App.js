@@ -22,24 +22,24 @@ class App extends Component {
   // управляем преключением страниц по скролу с таймаутом на функцию scrollCD
 
   deltaDet(e) {
-    if(this.state.allowChange){
+    // if(this.state.allowChange){
       
-      if(e.deltaY > 0){
+    //   if(e.deltaY > 0){
         
-        this.setState({
-          secondScreenActive: true,
-          allowChange: false,
-        });
-        setTimeout(this.scrollCD, 1200);
-      } else {
+    //     this.setState({
+    //       secondScreenActive: true,
+    //       allowChange: false,
+    //     });
+    //     setTimeout(this.scrollCD, 1200);
+    //   } else {
         
-        this.setState({
-          secondScreenActive: false,
-          allowChange: false,
-        });
-        setTimeout(this.scrollCD, 1200);
-      }
-    }
+    //     this.setState({
+    //       secondScreenActive: false,
+    //       allowChange: false,
+    //     });
+    //     setTimeout(this.scrollCD, 1200);
+    //   }
+    // }
   }
 
   render() {
@@ -47,20 +47,23 @@ class App extends Component {
       <div className="appWrap" > 
 
         <Header />
-        <div onWheel = {this.deltaDet} className={this.state.secondScreenActive ? 'jumbo jumbo_disabled' : 'jumbo'}>
-          <div className="jumbotext">
-          <h1 className="jumbotext__h">
-          Проектный депозит</h1>
-          <p className="jumbotext__p">
-          Это прибыльный продукт с уникальным названием, который подразумевает под собой, что инвестор или вкладчик заключает с компанией договор и получает высокий стабильный доход
-          </p>
-          <button class="jumbo__moreButton" onClick={() => this.setState({secondScreenActive: !this.state.secondScreenActive})}>Узнать больше</button>
-          <button class="jumbo__contactButton">Заказать звонок</button>
+        <div className="content">
+          <div onWheel = {this.deltaDet} className="jumbo">
+          <div className="jumboOver"></div>
+            <div className="jumbotext">
+            <h1 className="jumbotext__h">
+            Проектный депозит</h1>
+            <p className="jumbotext__p">
+            Это прибыльный продукт с уникальным названием, который подразумевает под собой, что инвестор или вкладчик заключает с компанией договор и получает высокий стабильный доход
+            </p>
+            <button class="jumbo__moreButton" onClick={() => this.setState({secondScreenActive: !this.state.secondScreenActive})}>Узнать больше</button>
+            <button class="jumbo__contactButton">Заказать звонок</button>
+            </div>
+            
           </div>
-          
-        </div>
-        <div  onWheel = {this.deltaDet} className={this.state.secondScreenActive ? 'secondScreen secondScreenActive' : 'secondScreen'}>
-        <Calculator/>
+          <div  onWheel = {this.deltaDet} className={this.state.secondScreenActive ? 'secondScreen secondScreenActive' : 'secondScreen'}>
+          <Calculator/>
+          </div>
         </div>
       </div>
     );

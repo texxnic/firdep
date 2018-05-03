@@ -27,9 +27,5 @@ h1,h2,h3,h4,h5,h6{
 	min-height: 100vh;
 	min-width: 100vw;
 	position: relative;
-	  background: url(bg.jpg) no-repeat top right; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	
 }
